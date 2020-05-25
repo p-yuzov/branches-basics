@@ -19,5 +19,15 @@ int main()
         citySchools[i].PercentStudent = (double) 100 * citySchools[i].Student
                                         / citySchools[i].Leaver;
     }
+    school tmpSchool;
+    for (int i = 0; i < SCHOOL_COUNT - 1; i++) {
+        for (int j = i + 1; j < SCHOOL_COUNT; j++) {
+            if (citySchools[i].PercentStudent > citySchools[j].PercentStudent) {
+                tmpSchool = citySchools[i];
+                citySchools[i] = citySchools[j];
+                citySchools[j] = tmpSchool;
+            }
+        }
+    }
     return 0;
 }
