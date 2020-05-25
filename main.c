@@ -19,5 +19,12 @@ int main()
         citySchools[i].PercentStudent = (double) 100 * citySchools[i].Student
                                         / citySchools[i].Leaver;
     }
+    for (int i = 0; i < SCHOOL_COUNT; i++) {
+        printf("\n Школа №%i: выпускников - %i, поступило - %i, процент - %f",
+               citySchools[i].Number,
+               citySchools[i].Leaver,
+               citySchools[i].Student,
+               citySchools[i].PercentStudent);
+    }
     return 0;
 }
